@@ -3,9 +3,117 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Home</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anta&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
+    <nav class="nav">
+        <img class="logo-revou" src="https://i.pinimg.com/564x/26/5b/11/265b1184cdfc341d454d2e9d1e94795f.jpg" alt="logo">
+        <ul class="menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#our-profil">Our Profile</a></li>
+            <li><a href="#our-profil">Portofolio</a></li>
+            <li><a href="#message-us">Message Us</a></li>
+        </ul>
+    </nav>
+
+    <div class="home">
+        <div class="text-container">
+            <h1 id="greeting">Hi, welcome to Riif Comp </h1>
+            <p> Ini merupakan website resmi dari Riif Comp, Riif Comp merupakan Agent Travel di Seluruh Indonesia.</p> 
+        </div>
+        <div class="slide-container">
+            <div class="image-container">
+              <img src="/foto/foto1.jpg" alt="Image 1">
+              <img src="/foto/foto2.jpg" alt="Image 2">
+              <img src="/foto/foto3.jpg" alt="Image 3">
+            </div>
+          </div>
+    </div>
+
+<!--Our Profile-->
     
+    <div id="our-profil" class="main-profil">
+        <div class="text-container-profil">
+            <H1>Apa si Riif Comp itu??</H1>
+            <p>Riif Comp adalah perusahaan yang menyediakan layanan perjalanan wisata yang berkualitas, profesional, dan terpercaya. Kami menawarkan berbagai paket wisata yang sesuai dengan kebutuhan dan anggaran Anda, baik domestik maupun internasional. Kami juga memiliki tim yang berpengalaman dan berdedikasi untuk memberikan pelayanan terbaik bagi para pelanggan kami. Dengan Riif Comp, Anda bisa menikmati liburan yang menyenangkan, aman, dan berkesan.</p>
+        </div>
+        <div class="image-circle">
+            <figure>
+                <img src="https://cdn0-production-images-kly.akamaized.net/73hwAXR12JfjCNDaONE1Prj_zSI=/1200x1200/smart/filters:quality(75):strip_icc():format(webp)/kly-media-production/medias/3097167/original/000202400_1586335889-20200408-Udara-Jakarta-Sehat-Jelang-PSBB-FANANI-1.jpg" alt="riifcomp">
+                <p>Jakarta</p>
+            </figure>
+           <figure>
+            <img src="https://cdn0-production-images-kly.akamaized.net/vGWG94s_chDb9LQfb6NH6r1a4vM=/1200x1200/smart/filters:quality(75):strip_icc():format(webp)/kly-media-production/medias/1499401/original/045062900_1486444805-Tugu_Yogyakarta.jpg" alt="riifcomp">
+            <p>Yogyakarta</p>
+            </figure>
+           <figure>
+            <img src="https://www.indonesia.travel/content/dam/indtravelrevamp/en/destinations/revision-2019/all-revision-destination/surabayathumb.jpg" alt="riifcomp">
+            <p>Surabaya</p>
+        </figure>
+        </div>
+        <h1 class="tittle-visi-misi">VISI DAN MISI</h1>
+        <div class="visi-misi">
+            <p>Visi: Menjadi perusahaan jasa wisata terdepan dan terpercaya di Indonesia yang memberikan pengalaman wisata yang berkualitas, berkesan, dan berkelanjutan.</p>
+            <ul>
+                <li>
+                    <p>Menyediakan berbagai paket wisata domestik dan internasional yang sesuai dengan kebutuhan dan anggaran pelanggan.</p>
+                </li>
+                <li>
+                    <p>Menyediakan layanan transportasi, akomodasi, dan pemandu wisata yang profesional, aman, dan nyaman.</p>
+                </li>
+                <li>
+                    <p>Menjalin kerjasama yang baik dengan pihak-pihak terkait, seperti pemerintah, asosiasi pariwisata, mitra usaha, dan komunitas lokal.</p>
+                </li>
+            </ul>
+        </div>
+        
+        <h1 class="tittle-visi-misi" style="margin-top: 75px;">Message Us</h1>
+
+        <div id="message-us" class="container">
+            <div class="container-form">
+                <form class="form" id="myForm" onsubmit="return validateForm(event)">
+                    <h2>Form Data Diri</h2>
+                    <div class="form-group">
+                        <label for="nama">Nama:</label>
+                        <input type="text" id="nama" name="nama" placeholder="Masukkan nama Anda...">
+                        <span id="namaError"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="tanggal">Tanggal Lahir:</label>
+                        <input type="date" id="tanggal" name="tanggal">
+                        <span id="tanggalError"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="jenis">Jenis Kelamin:</label>
+                        <select id="jenis" name="jenis">
+                            <option value="">Pilih jenis kelamin...</option>
+                            <option value="Laki-laki">Laki-laki</option>
+                            <option value="Perempuan">Perempuan</option>
+                        </select>
+                        <span id="jenisError"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="pesan">Pesan:</label>
+                        <textarea id="pesan" name="pesan" rows="5" placeholder="Masukkan pesan Anda..."></textarea>
+                        <span id="pesanError"></span>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit">Submit</button>
+                    </div>
+                </form>
+            </div>
+            <div class="result" id="result" style="display: none;">
+                <h2>Data Anda</h2>
+                <p><span>Nama:</span> <span id="namaResult"></span></p>
+                <p><span>Tanggal Lahir:</span> <span id="tanggalResult"></span></p>
+                <p><span>Jenis Kelamin:</span> <span id="jenisResult"></span></p>
+                <p><span>Pesan:</span> <span id="pesanResult"></span></p>
+            </div>
+        </div>
+    <script src="js/script.js"></script>
 </body>
 </html>
